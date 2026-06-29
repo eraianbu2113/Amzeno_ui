@@ -1,0 +1,21 @@
+:host ::ng-deep .fc .fc-col-header-cell-cushion {
+    color: rgb(0, 0, 0) !important;
+}
+
+:host ::ng-deep .fc .fc-daygrid-day-number {
+    color: black !important;
+}
+
+:host ::ng-deep .fc .fc-toolbar-title {
+    color: rgb(0, 0, 0) !important;
+    display: none;
+}
+
+
+:host ::ng-deep .fc .fc-event {
+    background-color: orange !important;
+    border-color: orange !important;
+}
+:host ::ng-deep .fc {
+    height: 550px;
+}

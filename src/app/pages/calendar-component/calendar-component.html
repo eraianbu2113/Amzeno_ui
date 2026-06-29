@@ -1,0 +1,62 @@
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-9 m-auto ">
+            <div class="row">
+                <div class="col-2"
+                    style=" margin-top: 15px; width: 40px;height: 40px; border-radius: 12px; background-image: linear-gradient(to bottom right, rgb(0, 8, 255) , rgb(81, 189, 225))">
+                    <fa-icon [icon]="facalendar" style="color: white; font-size: 25px;margin-left: -7px;" />
+                </div>
+                <div class="col-3">
+                    <h4><b>Meetings</b></h4>
+                    <p>3 upcoming</p>
+                </div>
+                <div class="col-8 ">
+                    <button (click)="onaddEvents()" class="bg-danger text-white"
+                        style="font-size: px;width: 140px; margin-left:82%; margin-bottom: 10px; border:none;border-radius: 10px;padding: 5px 10px; background-image: linear-gradient(to bottom right, rgb(0, 8, 255) , rgb(81, 189, 225));">+New
+                        Meeting</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 ">
+                    <full-calendar #calendar  [options]="calendarOptions"></full-calendar>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">ADD EVENTS</h4>
+                <button type="button"(click)="onCloseEvents()" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="/action_page.php">
+                    <div class="mb-3 mt-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" [(ngModel)]="eventobj.title" class="form-control" id="title" placeholder="Enter Title" name="title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pwd" class="form-label">Date:</label>
+                        <input type="date"  [(ngModel)]="eventobj.date" class="form-control" id="date" placeholder="Enter date" name="date">
+                    </div>
+                    <button (click)="onSaveEvent()" class="btn btn-primary me-2">Save Event</button>
+
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button"(click)="onCloseEvents()" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>

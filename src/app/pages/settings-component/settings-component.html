@@ -1,0 +1,49 @@
+<div class="conatiner mt-4">
+    <div class="row">
+        <div class="col-8  m-auto">
+            <div class="row">
+                <div class="col-2"
+                    style=" margin-top: 15px; width: 40px;height: 40px; border-radius: 12px; background-image: linear-gradient(to bottom right, rgb(0, 8, 255) , rgb(81, 189, 225))">
+                    <fa-icon [icon]="fagear" style="color: white; font-size: 25px;margin-left: -7px;" />
+                </div>
+                <div class="col-3">
+                    <h4><b>Settings</b></h4>
+                    <p>Manage Your Preferences</p>
+                </div>
+            
+            </div>
+
+            <div class="row">
+                <div class="col-9 " style="background-color: rgb(246, 246, 246);height: 40px; border-radius: 10px;">
+                    
+                    <div class="row">
+                        <div class="col-3 mt-2">
+                            <button class="btn-setting " [class.selected]="selectedButton === 'Profile'"(click)="selectedButton = 'Profile'"><fa-icon [icon]="fauser" style="color: gray;" />
+                            profile</button>
+                        </div>
+                        <div class="col-3 mt-2">
+                            <button class="btn-setting "  [class.selected]="selectedButton === 'Appearance'"(click)="selectedButton = 'Appearance'"><fa-icon [icon]="fapalette" style="color: gray;" />
+                                Appearance</button>
+                        </div>
+                        <div class="col-3 mt-2">
+                            <button class="btn-setting "  [class.selected]="selectedButton === 'Notification'"(click)="selectedButton = 'Notification'"><fa-icon [icon]="fabell" style="color: gray;" />
+                                Notification</button>
+                        </div>
+                        <div class="col-3 mt-2">
+                            <button class="btn-setting "[class.selected]="selectedButton === 'General'"(click)="selectedButton = 'General'"><fa-icon [icon]="faglobe" style="color: gray;" />
+                                General</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-12 shadow-sm " style="background-color: white;"><p><b>Notification Preferences</b></p>
+                    <div class="row">
+                        <div class="col-4 bg-danger">hello</div>
+                        <div class="col-4 bg-danger text-end">hello</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
