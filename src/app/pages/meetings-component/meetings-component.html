@@ -21,12 +21,9 @@
     <div class="row">
         <div class="col-9  m-auto">
             <p class="ps-2">Upcoming</p>
-
             <div class="row">
             
-                @for (item of meetingdata; track $index) {
-                    
-                
+                @for (item of todaymeetingdata; track $index) {
                     <div class="col-6 shadow mb-3 " style="border-radius: 10px;">
                         <div class="row ">
                             <div class="col-2"
@@ -35,19 +32,39 @@
                             </div>
                             <div class="col-4">
                                 <p style="font-size: 12px; font-weight: bold;display: inline;">{{item.meetingtitle}}</p>
-                                <p style="margin: 0;font-size: 12px;">{{item.meetingDate}}</p>
+                                <p style="margin: 0;font-size: 12px;"><fa-icon [icon]="facalendar"/>{{item.meetingDate}} <fa-icon [icon]="fastopwatch" />{{item.meetingduraction}}</p>
                                 <button
                                     style="margin-bottom: 10px;font-size: 12px; border-radius: 25px; border:none;color: rgb(0, 21, 255); background-color: rgb(130, 206, 244);">scheduled</button>
                             </div>
                             <div class="col-5">
                                 <button style="background-color: white; margin-left:60%; margin-bottom: 10px; border:none;">
                                     <fa-icon [icon]="faPenToSquare" style="color: black;" /></button>
-                                <button style="background-color: white; margin-left:0%; margin-bottom: 10px; border:none;">
+                                <button (click)="onDeletemeeting(item.id)"
+                                    style="background-color: white; margin-left:0%; margin-bottom: 10px; border:none;">
                                     <fa-icon [icon]="fatrashcan" style="color: red;" /></button>
                             </div>
                         </div>
                     </div>
                 }
+                <p style="color: gray;">past Meetings</p>
+                
+                @for (item of pastMeetingsdate; track $index) {
+                    <div class="col-5 shadow mb-3 ms-2" style="border-radius: 10px;">
+                        <div class="row ">
+                            <div class="col-2"
+                                style=" margin-top: 15px;margin-left: 25px; width: 30px;height: 30px; border-radius: 5px; background-image: linear-gradient(to bottom right, rgb(0, 8, 255) , rgb(81, 189, 225))">
+                                <fa-icon [icon]="favideo" style="color: white; font-size: 17px;margin-left: -7px;" />
+                            </div>
+                            <div class="col-5">
+                                <p style="font-size: 12px; font-weight: bold;display: inline;">{{item.meetingtitle}}</p>
+                                <p style="margin: 0;font-size: 12px;"><fa-icon [icon]="facalendar" />{{item.meetingDate}}<fa-icon [icon]="fastopwatch" />{{item.meetingduraction}}</p>
+                                <button
+                                    style="margin-bottom: 10px;font-size: 12px; border-radius: 25px; border:none;color: rgb(0, 21, 255); background-color: rgb(130, 206, 244);">scheduled</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+                    
             </div>
             
         </div>

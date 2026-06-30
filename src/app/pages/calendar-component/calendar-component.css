@@ -17,5 +17,5 @@
     border-color: orange !important;
 }
 :host ::ng-deep .fc {
-    height: 550px;
+    height: 510px;
 }

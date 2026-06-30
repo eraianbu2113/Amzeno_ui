@@ -1,6 +1,12 @@
 .hover-link:hover{
-    background-color: rgb(117, 212, 246);
+    background-color: rgb(198, 216, 254);
     color: blue !important;
-    border-radius: 20px;
+    border-radius: 15px;
     border-left: 4px;
+}
+.hover-link.active {
+    background-color: rgb(198, 216, 254);
+    color: blue !important;
+    border-radius: 15px;
+    border-left: 4px;;
 }

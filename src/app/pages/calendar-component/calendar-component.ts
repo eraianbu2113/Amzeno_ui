@@ -22,9 +22,12 @@ export class CalendarComponent implements OnInit  {
 
   eventobj:any={
     "title":"",
+    "time":"",
     "date": ""
   }
   eventsarr:any[]=[];
+  todayeventsarr:any[]=[];
+  todaydate=new Date().toISOString().split('T')[0];
   calendarOptions: CalendarOptions = 
   {
     initialView: 'dayGridMonth',
@@ -84,6 +87,12 @@ export class CalendarComponent implements OnInit  {
   showevents() {
 
     this.mastser.geEventdata().subscribe((res: any[]) => {
+
+      this.todayeventsarr=res.filter(item=>
+        item.date === this.todaydate
+      )
+      console.log(res)
+      console.log(this.todayeventsarr)
 
       const calendarApi = this.calendarComponent.getApi();
 
