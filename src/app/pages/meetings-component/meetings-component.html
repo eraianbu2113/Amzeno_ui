@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container mt-4">
     <div class="row align-items-center">
         <div class="col-9  m-auto">
@@ -13,6 +14,23 @@
                 <div class="col-5 col-md-7 col-lg-8 text-end ">
                     <button (click)="onaddEvents()" class="bg-danger text-white"
                         style="font-size: px;width: 140px; margin-bottom: 10px; border:none;border-radius: 10px;padding: 5px 10px; background-image: linear-gradient(to bottom right, rgb(0, 8, 255) , rgb(81, 189, 225));">+New
+=======
+<div class="conatiner mt-4">
+    <div class="row">
+        <div class="col-9  m-auto">
+            <div class="row ">
+                <div class="col-2"
+                    style=" margin-top: 15px; width: 40px;height: 40px; border-radius: 12px; background-image: linear-gradient(to bottom right, rgb(0, 8, 255) , rgb(81, 189, 225))">
+                    <fa-icon [icon]="fauser" style="color: white; font-size: 25px;margin-left: -7px;" />
+                </div>
+                <div class="col-3">
+                    <h4><b>Meetings</b></h4>
+                    <p>3 upcoming</p>
+                </div>
+                <div class="col-8 ">
+                    <button (click)="onaddEvents()" class="bg-danger text-white"
+                        style="font-size: px;width: 140px; margin-left:82%; margin-bottom: 10px; border:none;border-radius: 10px;padding: 5px 10px; background-image: linear-gradient(to bottom right, rgb(0, 8, 255) , rgb(81, 189, 225));">+New
+>>>>>>> 7c31cd6e57f54ec39d971b6d457b46632749f078
                         Meeting</button>
                 </div>
             </div>
@@ -24,6 +42,7 @@
             <div class="row">
             
                 @for (item of todaymeetingdata; track $index) {
+<<<<<<< HEAD
                     <div class="col-12 col-md-6 mb-3">
                         <div class="shadow p-2 h-100" style="border-radius:10px;">
                             <div class="row ">
@@ -32,26 +51,44 @@
                                 <fa-icon [icon]="favideo" style="color: white; font-size: 17px;margin-left: -7px;" />
                             </div>
                             <div class="col-7 col-sm-8">
+=======
+                    <div class="col-6 shadow mb-3 " style="border-radius: 10px;">
+                        <div class="row ">
+                            <div class="col-2"
+                                style=" margin-top: 15px;margin-left: 25px; width: 30px;height: 30px; border-radius: 5px; background-image: linear-gradient(to bottom right, rgb(0, 8, 255) , rgb(81, 189, 225))">
+                                <fa-icon [icon]="favideo" style="color: white; font-size: 17px;margin-left: -7px;" />
+                            </div>
+                            <div class="col-4">
+>>>>>>> 7c31cd6e57f54ec39d971b6d457b46632749f078
                                 <p style="font-size: 12px; font-weight: bold;display: inline;">{{item.meetingtitle}}</p>
                                 <p style="margin: 0;font-size: 12px;"><fa-icon [icon]="facalendar"/>{{item.meetingDate}} <fa-icon [icon]="fastopwatch" />{{item.meetingduraction}}</p>
                                 <button
                                     style="margin-bottom: 10px;font-size: 12px; border-radius: 25px; border:none;color: rgb(0, 21, 255); background-color: rgb(130, 206, 244);">scheduled</button>
                             </div>
+<<<<<<< HEAD
                             <div class="col-3 col-sm-2 text-end">
                                 <button style="background-color: white; ; margin-bottom: 10px; border:none;">
+=======
+                            <div class="col-5">
+                                <button style="background-color: white; margin-left:60%; margin-bottom: 10px; border:none;">
+>>>>>>> 7c31cd6e57f54ec39d971b6d457b46632749f078
                                     <fa-icon [icon]="faPenToSquare" style="color: black;" /></button>
                                 <button (click)="onDeletemeeting(item.id)"
                                     style="background-color: white; margin-left:0%; margin-bottom: 10px; border:none;">
                                     <fa-icon [icon]="fatrashcan" style="color: red;" /></button>
                             </div>
                         </div>
+<<<<<<< HEAD
                         </div>
                         
+=======
+>>>>>>> 7c31cd6e57f54ec39d971b6d457b46632749f078
                     </div>
                 }
                 <p style="color: gray;">past Meetings</p>
                 
                 @for (item of pastMeetingsdate; track $index) {
+<<<<<<< HEAD
                     <div class="col-12 col-md-6 mb-3">
                         <div class="shadow p-2 h-100" style="border-radius:10px;">
                             <div class="row ">
@@ -69,6 +106,21 @@
                             </div>
                         </div>
                         
+=======
+                    <div class="col-5 shadow mb-3 ms-2" style="border-radius: 10px;">
+                        <div class="row ">
+                            <div class="col-2"
+                                style=" margin-top: 15px;margin-left: 25px; width: 30px;height: 30px; border-radius: 5px; background-image: linear-gradient(to bottom right, rgb(0, 8, 255) , rgb(81, 189, 225))">
+                                <fa-icon [icon]="favideo" style="color: white; font-size: 17px;margin-left: -7px;" />
+                            </div>
+                            <div class="col-5">
+                                <p style="font-size: 12px; font-weight: bold;display: inline;">{{item.meetingtitle}}</p>
+                                <p style="margin: 0;font-size: 12px;"><fa-icon [icon]="facalendar" />{{item.meetingDate}}<fa-icon [icon]="fastopwatch" />{{item.meetingduraction}}</p>
+                                <button
+                                    style="margin-bottom: 10px;font-size: 12px; border-radius: 25px; border:none;color: rgb(0, 21, 255); background-color: rgb(130, 206, 244);">scheduled</button>
+                            </div>
+                        </div>
+>>>>>>> 7c31cd6e57f54ec39d971b6d457b46632749f078
                     </div>
                 }
                     
