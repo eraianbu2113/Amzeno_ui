@@ -69,8 +69,8 @@ export class MeetingsComponent implements OnInit {
       console.log(this.todaymeetingdata);
       console.log(this.todaydate);
 
-      this.masterser.upcomingmeeting.next(this.upcomingMeeting);
-      this.masterser.todaycomingmeeting.next(this.todaymeetingdata);
+      // this.masterser.upcomingmeeting.next(this.upcomingMeeting);
+      // this.masterser.todaycomingmeeting.next(this.todaymeetingdata);
       
 
       this.pastMeetingsdate = res.filter(item =>

@@ -7,8 +7,8 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class Masterservice {
-  upcomingmeeting = new BehaviorSubject<any[]>([]);
-  todaycomingmeeting = new BehaviorSubject<any[]>([]);
+  // upcomingmeeting = new BehaviorSubject<any[]>([]);
+  // todaycomingmeeting = new BehaviorSubject<any[]>([]);
   ApiURL="http://localhost:3001/";
   
   constructor(private http:HttpClient ){}
@@ -28,5 +28,16 @@ export class Masterservice {
   }
   getDeletemeeting(id:string){
     return this.http.delete(`${this.ApiURL}meetings/${id}`)
+  }
+
+  postReminder(obj:any){
+    return this.http.post<any[]>(this.ApiURL+"Reminder",obj)
+  }
+  getReminder(){
+    return this.http.get<any[]>(this.ApiURL+"Reminder")
+  }
+  deletereminder(id:string){
+    return this.http.delete(`${this.ApiURL}Reminder/${id}`)
+
   }
 }
