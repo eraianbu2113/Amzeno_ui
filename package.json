@@ -4,11 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-<<<<<<< HEAD
     "server": "cd ../Amzeno-api && nodemon server.js",
     "dev": "concurrently \"npm start\" \"npm run server\"",
-=======
->>>>>>> 7c31cd6e57f54ec39d971b6d457b46632749f078
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -38,10 +35,7 @@
     "@angular/build": "^21.2.13",
     "@angular/cli": "^21.2.13",
     "@angular/compiler-cli": "^21.2.0",
-<<<<<<< HEAD
     "concurrently": "^10.0.3",
-=======
->>>>>>> 7c31cd6e57f54ec39d971b6d457b46632749f078
     "jsdom": "^28.0.0",
     "prettier": "^3.8.1",
     "typescript": "~5.9.2",
