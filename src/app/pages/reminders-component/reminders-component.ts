@@ -14,22 +14,22 @@ export class RemindersComponent {
   fafilelines=faFileLines;
   faalarmclock=faAlarmClock;
 
-  // reminderTime: string = '';
+  reminderTime: string = '';
 
-  // setReminder() {
-  //   const reminderDate = new Date(this.reminderTime);
-  //   const currentDate = new Date();
+  setReminder() {
+    const reminderDate = new Date(this.reminderTime);
+    const currentDate = new Date();
 
-  //   const delay = reminderDate.getTime() - currentDate.getTime();
+    const delay = reminderDate.getTime() - currentDate.getTime();
 
-  //   if (delay <= 0) {
-  //     alert("Please select a future time");
-  //     return;
-  //   }
+    if (delay <= 0) {
+      alert("Please select a future time");
+      return;
+    }
 
-  //   setTimeout(() => {
-  //     alert("Reminder!");
-  //   }, delay);
+    setTimeout(() => {
+      alert("Reminder!");
+    }, delay);
 
-  // }
+  }
 }
