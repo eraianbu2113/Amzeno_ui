@@ -1,0 +1,26 @@
+.e-footer-container .e-btn.e-flat:hover {
+    background-color: #0b5ed7 !important;
+    color: white !important;
+}
+.e-footer-container .e-btn.e-flat {
+    background-color: #0d6efd !important;
+    border-radius: 15px;
+    color: white !important;
+}
+.e-calendar .e-header {
+   
+}
+
+
+.e-calendar .e-selected span.e-day {
+    background: #2563eb !important;
+    color: white !important;
+}
+
+.e-calendar td span.e-day:hover {
+    background: #bfdbfe !important;
+}
+
+.e-calendar .e-today span.e-day {
+    border: 2px solid #2563eb !important;
+}

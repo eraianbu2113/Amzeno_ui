@@ -27,9 +27,14 @@
     "@fullcalendar/core": "^6.1.21",
     "@fullcalendar/daygrid": "^6.1.21",
     "@fullcalendar/interaction": "^6.1.21",
+    "@syncfusion/ej2-angular-calendars": "^33.2.15",
+    "angular-highcharts": "^20.0.0",
     "bootstrap": "^5.3.8",
+    "highcharts": "^13.0.0",
+    "highcharts-angular": "^5.4.0",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@syncfusion/ej2-material-theme": "~33.2.15"
   },
   "devDependencies": {
     "@angular/build": "^21.2.13",

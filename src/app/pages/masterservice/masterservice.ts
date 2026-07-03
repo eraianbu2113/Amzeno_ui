@@ -38,6 +38,9 @@ export class Masterservice {
   }
   deletereminder(id:string){
     return this.http.delete(`${this.ApiURL}Reminder/${id}`)
+  }
 
+  postweekly(obj:any){
+    return this.http.post(this.ApiURL+"weeklychart",obj)
   }
 }
