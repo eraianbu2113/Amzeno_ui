@@ -22,6 +22,7 @@ export class MeetingsComponent implements OnInit {
   facalendar=faCalendar
 
   meetingObj:any={
+    "id":0,
     "meetingtitle":"",
     "meetingDate":new Date(),
     "meetingduraction":""

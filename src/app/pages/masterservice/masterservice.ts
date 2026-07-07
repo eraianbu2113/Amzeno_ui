@@ -46,4 +46,20 @@ export class Masterservice {
   postweekly(obj:any){
     return this.http.post(this.ApiURL+"weeklychart",obj)
   }
+
+  getNotes(){
+    return this.http.get<any[]>(this.ApiURL+"Notes")
+  }
+
+  postnotes(obj:any){
+    return this.http.post<any[]>(this.ApiURL+"Notes",obj)
+  }
+
+  updateNotes(obj:any,id:string){
+    return this.http.put<any[]>(`${this.ApiURL}Notes/${id}`,obj)
+  }
+
+  deleteNotes(id:string){
+    return this.http.delete(`${this.ApiURL}Notes/${id}`)
+  }
 }

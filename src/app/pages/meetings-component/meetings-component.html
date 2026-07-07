@@ -105,11 +105,11 @@
                         <input type="type" [(ngModel)]="meetingObj.meetingduraction" class="form-control" id="date" placeholder="Enter Duraction"
                             name="meetingduraction">
                     </div>
-                    @if(meetingObj.id === ''){
-                        <button class="btn btn-primary me-2" (click)="onSavemeeting()">Save Event</button>
-                    }@else {
-                        <button class="btn btn-primary me-2" (click)="onUpdatemeeting(meetingObj.id)">update Event</button>
-                    }
+                    
+                    <button class="btn btn-primary me-2" (click)="onSavemeeting()">Save Event</button>
+                    
+                    <button class="btn btn-primary me-2" (click)="onUpdatemeeting(meetingObj.id)">update Event</button>
+                    
                     
 
                 </form>
