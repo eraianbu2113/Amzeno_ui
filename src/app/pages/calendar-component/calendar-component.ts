@@ -7,6 +7,7 @@ import { CalendarOptions } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { Masterservice } from '../masterservice/masterservice';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-calendar-component',
@@ -19,6 +20,7 @@ export class CalendarComponent implements OnInit  {
   facalendar = faCalendar;
   @ViewChild('calendar') calendarComponent!: FullCalendarComponent;
   mastser=inject(Masterservice);
+  cd = inject(ChangeDetectorRef)
 
   eventobj:any={
     "title":"",
@@ -41,6 +43,7 @@ export class CalendarComponent implements OnInit  {
   }
   ngOnInit(): void {
       this.showevents();
+      
   }
   onaddEvents(){
     const model=document.getElementById("myModal");
@@ -90,9 +93,12 @@ export class CalendarComponent implements OnInit  {
 
       this.todayeventsarr=res.filter(item=>
         item.date === this.todaydate
-      )
+      );
+      this.cd.detectChanges();
       console.log(res)
       console.log(this.todayeventsarr)
+      console.log(this.todayeventsarr.length)
+      this.todayeventsarr=this.todayeventsarr;
 
       const calendarApi = this.calendarComponent.getApi();
 

@@ -82,9 +82,27 @@ export class MeetingsComponent implements OnInit {
     });
   }
   onDeletemeeting(id:string){
-    this.masterser.getDeletemeeting(id).subscribe(()=>{
+    const isDelete=confirm("Are you want to delete")
+    if(isDelete){
+      this.masterser.getDeletemeeting(id).subscribe(()=>{
       alert("Meeting deleted successfully");
       this.onshowmeeting();
+    })
+    }
+    
+  }
+
+  onEdit(data:any){
+    this.onaddEvents()
+    this.meetingObj=data;
+  }
+  onUpdatemeeting(id:string){
+    this.masterser.updateMeetingdetails(this.meetingObj,id).subscribe((res:any)=>{
+      alert("sucess");
+      this.onshowmeeting()
+      this.onCloseEvents()
+    },error=>{
+      alert(JSON.stringify(error))
     })
   }
   

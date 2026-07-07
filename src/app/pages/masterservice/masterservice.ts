@@ -23,6 +23,9 @@ export class Masterservice {
   postMeetingdetails(obj:any){
     return this.http.post<any[]>(this.ApiURL+"meetings",obj)
   }
+  updateMeetingdetails(obj:any,id:string){
+    return this.http.put<any[]>(`${this.ApiURL}meetings/${id}`, obj)
+  }
   getMeetingdata(){
     return this.http.get<any[]>(this.ApiURL+"meetings")
   }

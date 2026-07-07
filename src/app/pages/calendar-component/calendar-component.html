@@ -7,8 +7,8 @@
                     <fa-icon [icon]="facalendar" style="color: white; font-size: 25px;margin-left: -7px;" />
                 </div>
                 <div class="col-6 col-sm-5 col-md-4">
-                    <h4 style="margin: 0;"><b>Meetings</b></h4>
-                    <p style="margin: 0;">3 upcoming</p>
+                    <h4 style="margin: 0;"><b>Calendar</b></h4>
+                    <p style="margin: 0;">{{todayeventsarr.length}} upcoming</p>
                 </div>
                 <div class="col-12 col-sm-6 col-md-7 text-sm-end mt-3 mt-sm-0 ">
                     <button (click)="onaddEvents()" 

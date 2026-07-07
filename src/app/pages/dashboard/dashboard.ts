@@ -113,6 +113,7 @@ export class Dashboard implements OnInit {
   todayeventsarr:any[]=[];
   upcomingeventsarr:any[]=[];
   todaymeetcount:number=0;
+  totdaymeetingcount1=0;
   todayeventcount:number=0;
   todaydate = new Date().toISOString().split('T')[0];
   
@@ -136,18 +137,25 @@ export class Dashboard implements OnInit {
     this.masterser.getMeetingdata().subscribe((res:any[])=>{
       this.upcomingmeeting=res;
       console.log(this.upcomingmeeting);
-      this.todaymeetcount=this.todaymeeting.length
+      
       this.todaymeeting=res.filter((item)=>
         item.meetingDate >= this.todaydate
       );
-      
-      
-      if (this.todaymeeting.length!=this.todaymeeting.length) {
-         this.postweeklyevent();
-        }
-      this.cd.detectChanges();
-      console.log(this.todaymeetcount);
 
+      this.todaymeetcount=this.todaymeeting.length;
+      
+      console.log("count1"+this.totdaymeetingcount1);
+      console.log("count"+this.todaymeetcount);
+
+      this.cd.detectChanges();
+      
+      if (this.totdaymeetingcount1 === this.todaymeetcount) {
+
+        this.totdaymeetingcount1=this.todaymeetcount;
+        this.postweeklyevent();
+        console.log(this.totdaymeetingcount1)
+      }
+      this.cd.detectChanges();
 
     })
   }
